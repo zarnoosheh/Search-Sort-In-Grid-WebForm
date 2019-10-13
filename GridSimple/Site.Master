@@ -1,0 +1,36 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="GridSample.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="fa">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Grid Simple</title>
+
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
+
+    <link rel="stylesheet" href="~/Theme/assets/bootstrap-rtl/css/bootstrap-rtl.min.css" />
+    <link rel="stylesheet" href="~/Theme/assets/bootstrap-rtl/css/bootstrap-responsive-rtl.min.css" />
+    <link rel="stylesheet" href="/Theme/assets/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="/Theme/css/style.css" />
+    <link rel="stylesheet" href="/Theme/css/style_default.css" id="style_color" />
+</head>
+<body>
+    <form runat="server">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">Grid Sample</a>
+                </div>
+            </div>
+        </div>
+        <div class="container body-content">
+            <div style="margin-top: 80px;">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
