@@ -10,7 +10,7 @@ namespace GridSimple.Services
 {
     public class PersonService : BaseService
     {
-        public List<Person> GetPerson(ref int xPlansCount, PersonSearchParameter xParameter)
+        public List<Person> GetPerson(ref int xCount, PersonSearchParameter xParameter)
         {
             using (UnitOfWork uow = new UnitOfWork())
             {
@@ -78,7 +78,7 @@ namespace GridSimple.Services
                     xFilter = xFilter.And(p => p.xBirthCartPlace.Contains(xParameter.xBirthCartPlace));
                 #endregion
 
-                var xPlanList = uow.PersonRepository.Get(ref xPlansCount, xFilter, xOrderBy, xParameter.xPage, xParameter.xPageSize);
+                var xPlanList = uow.PersonRepository.Get(ref xCount, xFilter, xOrderBy, xParameter.xPage, xParameter.xPageSize);
                 return xPlanList.ToList();
             }
         }
